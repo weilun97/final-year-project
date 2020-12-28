@@ -11,7 +11,7 @@
             <div class="content d-flex flex-column justify-content-center">
               <h3 data-aos="fade-up">Taruc Accomodation System</h3>
               <p data-aos="fade-up">
-                 are here to serve the taruc students and staffs and help ease out their problems with renting room and also purchasing their daily necessary items. 
+                We are here to serve the taruc students and staffs and help ease out their problems with renting room and also purchasing their daily necessary items. 
               </p>
               <div class="row">
                 <div class="col-md-6 icon-box" data-aos="fade-up">
