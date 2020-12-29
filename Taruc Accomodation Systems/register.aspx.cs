@@ -21,7 +21,22 @@ namespace Taruc_Accomodation_Systems
 
         protected void btnregister_Click(object sender, EventArgs e)
         {
-
+            if (txtusername.Text == "" || txtpassword.Text == "")
+                lblErrorMessage.Text = "Please Fill Mandatory Fields";
+            else if (txtpassword.Text != txtconfirmpassword.Text)
+                lblErrorMessage.Text = "Password do not match";
+            else
+            {
+                using (sqlCon)
+                {
+                    sqlCon.Open();
+                    SqlCommand sqlCmd = new SqlCommand("UserAddOrEdit", sqlCon);
+                    sqlCmd.CommandType = CommandType.StoredProcedure;
+                    sqlCmd.Parameters.AddWithValue("@fname", txtfirstname.Text.Trim());
+                    sqlCmd.ExecuteNonQuery();
+                    Response.Write("<script>alert('Register Successful!'); window.location.href = 'login.aspx'; </script>");
+                }
+            }
         }
     }
 }
