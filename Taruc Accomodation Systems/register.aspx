@@ -39,7 +39,7 @@
   </div>
   
   <div class="panel-body">
-  
+    <asp:HiddenField ID="hfuserid" runat="server" />
        <form id="form1" submitdisabledcontrols="False">
             <div class="row">
     			<div class="col-xs-12 col-sm-4 col-md-4">

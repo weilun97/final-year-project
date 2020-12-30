@@ -7,13 +7,20 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace Taruc_Accomodation_Systems
-{
-
-
-    public partial class register
-    {
-
+namespace Taruc_Accomodation_Systems {
+    
+    
+    public partial class register {
+        
+        /// <summary>
+        /// hfuserid control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.HiddenField hfuserid;
+        
         /// <summary>
         /// txtfirstname control.
         /// </summary>
@@ -22,7 +29,7 @@ namespace Taruc_Accomodation_Systems
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox txtfirstname;
-
+        
         /// <summary>
         /// txtmiddlename control.
         /// </summary>
@@ -31,7 +38,7 @@ namespace Taruc_Accomodation_Systems
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox txtmiddlename;
-
+        
         /// <summary>
         /// txtlastname control.
         /// </summary>
@@ -40,7 +47,7 @@ namespace Taruc_Accomodation_Systems
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox txtlastname;
-
+        
         /// <summary>
         /// txtusername control.
         /// </summary>
@@ -49,7 +56,7 @@ namespace Taruc_Accomodation_Systems
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox txtusername;
-
+        
         /// <summary>
         /// txtemail control.
         /// </summary>
@@ -58,7 +65,7 @@ namespace Taruc_Accomodation_Systems
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox txtemail;
-
+        
         /// <summary>
         /// txtpassword control.
         /// </summary>
@@ -67,7 +74,7 @@ namespace Taruc_Accomodation_Systems
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox txtpassword;
-
+        
         /// <summary>
         /// txtconfirmpassword control.
         /// </summary>
@@ -76,7 +83,7 @@ namespace Taruc_Accomodation_Systems
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox txtconfirmpassword;
-
+        
         /// <summary>
         /// btnregister control.
         /// </summary>
@@ -85,7 +92,7 @@ namespace Taruc_Accomodation_Systems
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Button btnregister;
-
+        
         /// <summary>
         /// lblErrorMessage control.
         /// </summary>
@@ -94,7 +101,7 @@ namespace Taruc_Accomodation_Systems
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label lblErrorMessage;
-
+        
         /// <summary>
         /// lblSuccessMessage control.
         /// </summary>
