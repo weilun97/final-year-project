@@ -14,6 +14,7 @@ namespace Taruc_Accomodation_Systems
     public partial class register : System.Web.UI.Page
     {
         SqlConnection sqlCon = new SqlConnection(ConfigurationManager.ConnectionStrings["Database"].ConnectionString);
+
         protected void Page_Load(object sender, EventArgs e)
         {
             
