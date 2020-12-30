@@ -13,15 +13,23 @@ namespace Taruc_Accomodation_Systems
 
     public partial class register : System.Web.UI.Page
     {
-        SqlConnection sqlCon = new SqlConnection(ConfigurationManager.ConnectionStrings["Database"].ConnectionString);
+        SqlConnection con = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\Database.mdf;Integrated Security=True");
 
         protected void Page_Load(object sender, EventArgs e)
         {
-            
+            if(con.State == ConnectionState.Open)
+            {
+                con.Close();
+            }
+            con.Open();
         }
 
         protected void btnregister_Click(object sender, EventArgs e)
         {
+            SqlCommand cmd = con.CreateCommand();
+            cmd.CommandType = CommandType.Text;
+            cmd.CommandText = "insert into register values('"+ fname.text +"','"+ lastname.text"')";
+
             if (txtusername.Text == "" || txtpassword.Text == "")
                 lblErrorMessage.Text = "Please Fill Mandatory Fields";
             else if (txtpassword.Text != txtconfirmpassword.Text)
