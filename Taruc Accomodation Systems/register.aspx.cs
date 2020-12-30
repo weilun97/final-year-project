@@ -13,38 +13,10 @@ namespace Taruc_Accomodation_Systems
 
     public partial class register : System.Web.UI.Page
     {
-        SqlConnection sqlCon = new SqlConnection(ConfigurationManager.ConnectionStrings["Database"].ConnectionString);
 
         protected void Page_Load(object sender, EventArgs e)
         {
             
-        }
-
-        protected void btnregister_Click(object sender, EventArgs e)
-        {
-            
-            if (txtusername.Text == "" || txtpassword.Text == "")
-                lblErrorMessage.Text = "Please Fill Mandatory Fields";
-            else if (txtpassword.Text != txtconfirmpassword.Text)
-                lblErrorMessage.Text = "Password do not match";
-            else
-            {
-                using (sqlCon)
-                {
-                    sqlCon.Open();
-                    SqlCommand sqlCmd = new SqlCommand("UserAddOrEdit", sqlCon);
-                    sqlCmd.CommandType = CommandType.StoredProcedure;
-                    sqlCmd.Parameters.AddWithValue("@userid", Convert.ToInt32(hfuserid.Value == "" ? "0" : hfuserid.Value));
-                    sqlCmd.Parameters.AddWithValue("@fname", txtfirstname.Text.Trim());
-                    sqlCmd.Parameters.AddWithValue("@lname", txtlastname.Text.Trim());
-                    sqlCmd.Parameters.AddWithValue("@mname", txtmiddlename.Text.Trim());
-                    sqlCmd.Parameters.AddWithValue("@username", txtusername.Text.Trim());
-                    sqlCmd.Parameters.AddWithValue("@password", txtpassword.Text.Trim());
-                    sqlCmd.Parameters.AddWithValue("@email", txtemail.Text.Trim());
-                    sqlCmd.ExecuteNonQuery();
-                    Response.Write("<script>alert('Register successful!');window.location.href = 'login.aspx'; </script>");
-                }
-            }
         }
     }
 }

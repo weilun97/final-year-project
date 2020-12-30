@@ -88,7 +88,7 @@
            </div>                      
                               
     <div class="container-login100-form-btn"> 
-        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;<asp:Button ID="btnregister" class="login100-form-btn" runat="server" Text="Register" BackColor="White" BorderStyle="Solid" ForeColor="Black" style="text-align:center"/>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;<asp:Button ID="btnregister" class="login100-form-btn" runat="server" Text="Register" BackColor="White" BorderStyle="Solid" ForeColor="Black" style="text-align:center" OnClick="btnregister_Click1"/>
   </div>  
   <hr style="margin-top:10px;margin-bottom:10px;" />
  
