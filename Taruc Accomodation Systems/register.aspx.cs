@@ -26,9 +26,9 @@ namespace Taruc_Accomodation_Systems
         protected void btnregister_Click1(object sender, EventArgs e)
         {
             if (txtusername.Text == "" || txtpassword.Text == "")
-                lblErrorMessage.Text = "Please fill mandatory fields";
+                Response.Write("<script>alert('Please fill mandatory fields');</script>");
             else if (txtpassword.Text != txtconfirmpassword.Text)
-                lblErrorMessage.Text = "Password do not match";
+                Response.Write("<script>alert('Password and confirm password do not match');</script>");
             else
             {
                 using (SqlConnection sqlCon = new SqlConnection(connectionString))
@@ -45,7 +45,7 @@ namespace Taruc_Accomodation_Systems
                     sqlCmd.Parameters.AddWithValue("@password", txtpassword.Text.Trim());
                     sqlCmd.ExecuteNonQuery();
                     Clear();
-                    lblSuccessMessage.Text = "Register successfully";
+                    Response.Write("<script>alert('Register Successful!');window.location.href = 'login.aspx';</script>");
                 }
             }
         }
