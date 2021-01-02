@@ -44,7 +44,7 @@
             <div class="row">
     			<div class="col-xs-12 col-sm-4 col-md-4">
 					<div class="wrap-input100 validate-input m-b-26" data-validate="First name is required">
-                        <asp:TextBox ID="txtfirstname" class="input100" placeholder="First Name" runat="server"></asp:TextBox>
+                        <asp:TextBox ID="txtfirstname" class="input100" placeholder="First Name *" runat="server"></asp:TextBox>
                         <span class="focus-input100">
                         <asp:RequiredFieldValidator ID="RequiredFieldValidatorfname" runat="server" ErrorMessage="Name is required" ControlToValidate="txtfirstname"></asp:RequiredFieldValidator>
                         </span>
@@ -52,29 +52,29 @@
 				</div>
                 <div class="col-xs-12 col-sm-4 col-md-4">
     				<div class="wrap-input100 validate-input m-b-22" data-validate="Middle name is required">
-                         <asp:TextBox ID="txtmiddlename" class="input100" placeholder="Middle Name" runat="server"></asp:TextBox>
+                         <asp:TextBox ID="txtmiddlename" class="input100" placeholder="Middle Name *" runat="server"></asp:TextBox>
                         <span class="focus-input100"></span>
 					</div>
 				</div>
 				<div class="col-xs-12 col-sm-4 col-md-4">
 					<div class="wrap-input100 validate-input m-b-18" data-validate="Last name is required">
-						 <asp:TextBox ID="txtlastname" class="input100" placeholder="Last Name" runat="server"></asp:TextBox>
+						 <asp:TextBox ID="txtlastname" class="input100" placeholder="Last Name *" runat="server"></asp:TextBox>
                         <span class="focus-input100"></span>
 					</div>
 				</div>
 			</div>
 			<div class="wrap-input100 validate-input m-b-14" data-validate="Username is required">
-				<asp:TextBox ID="txtusername" class="input100"  placeholder="Prefered Username" runat="server"></asp:TextBox>
+				<asp:TextBox ID="txtusername" class="input100"  placeholder="Prefered Username *" runat="server"></asp:TextBox>
                  <span class="focus-input100"></span>
 			</div>
                 <div class="wrap-input100 validate-input m-b-10" data-validate="Email is required">
-				<asp:TextBox ID="txtemail" class="input100" TextMode="Email" placeholder="Email Address" runat="server"></asp:TextBox>
+				<asp:TextBox ID="txtemail" class="input100" TextMode="Email" placeholder="Email Address *" runat="server"></asp:TextBox>
                 <span class="focus-input100"></span>
 			</div>
 			<div class="row">
 				<div class="col-xs-12 col-sm-6 col-md-6">
 					<div class="wrap-input100 validate-input m-b-6" data-validate="Password is required">
-						<asp:TextBox ID="txtpassword" class="input100" TextMode="Password" placeholder="Password" runat="server"></asp:TextBox>
+						<asp:TextBox ID="txtpassword" class="input100" TextMode="Password" placeholder="Password *" runat="server"></asp:TextBox>
                         <span class="focus-input100"></span>
 					</div>
 				</div>
@@ -82,7 +82,7 @@
 				<div class="col-xs-12 col-sm-6 col-md-6">
 					<div class="form-group">
                         <div class="wrap-input100 validate-input m-b-2" data-validate="Password is required">
-						<asp:TextBox ID="txtconfirmpassword" class="input100" TextMode="Password" placeholder="Confirm Password" runat="server"></asp:TextBox>
+						<asp:TextBox ID="txtconfirmpassword" class="input100" TextMode="Password" placeholder="Confirm Password *" runat="server"></asp:TextBox>
                         <span class="focus-input100"></span>
 					</div>
 				</div>

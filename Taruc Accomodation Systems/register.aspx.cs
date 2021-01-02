@@ -26,10 +26,10 @@ namespace Taruc_Accomodation_Systems
         protected void btnregister_Click1(object sender, EventArgs e)
         {
             if (txtusername.Text == "" || txtpassword.Text == "")
-                Response.Write("<script>alert('Please fill mandatory fields');</script>");
+                Response.Write("<script>alert('Please Fill All Mandatory Fields!');</script>");
                 //lblErrorMessage.Text = "please fill mandatory fields";
             else if (txtpassword.Text != txtconfirmpassword.Text)
-                Response.Write("<script>alert('Password and confirm password do not match');</script>");
+                Response.Write("<script>alert('Password and Confirm Password Do Not Match!');</script>");
                 //lblErrorMessage.Text = "password do not match";
             else
             {
