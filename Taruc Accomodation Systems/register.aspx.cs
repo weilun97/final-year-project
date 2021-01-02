@@ -36,7 +36,16 @@ namespace Taruc_Accomodation_Systems
                 using (SqlConnection sqlCon = new SqlConnection(connectionString))
                 {
                     sqlCon.Open();
+
+                    string checkusername = "select count(*) from register where username='" + txtusername.Text + "'";
                     SqlCommand sqlCmd = new SqlCommand("UserAddOrEdit", sqlCon);
+                    SqlCommand ckuser = new SqlCommand(checkusername, sqlCon);
+                    string ckusername = ckuser.ExecuteScalar().ToString();
+                    
+                    if(ckusername == txtusername.Text)
+                    {
+                        Response.Write("<script>alert('Username Existed!');</script>");
+                    }
                     sqlCmd.CommandType = CommandType.StoredProcedure;
                     sqlCmd.Parameters.AddWithValue("@userid", Convert.ToInt32(hfuserid.Value == "" ? "0" : hfuserid.Value));
                     sqlCmd.Parameters.AddWithValue("@fname", txtfirstname.Text.Trim());
