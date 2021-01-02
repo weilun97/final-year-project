@@ -27,8 +27,10 @@ namespace Taruc_Accomodation_Systems
         {
             if (txtusername.Text == "" || txtpassword.Text == "")
                 Response.Write("<script>alert('Please fill mandatory fields');</script>");
+                //lblErrorMessage.Text = "please fill mandatory fields";
             else if (txtpassword.Text != txtconfirmpassword.Text)
                 Response.Write("<script>alert('Password and confirm password do not match');</script>");
+                //lblErrorMessage.Text = "password do not match";
             else
             {
                 using (SqlConnection sqlCon = new SqlConnection(connectionString))

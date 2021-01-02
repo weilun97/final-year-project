@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Masterpage.Master" AutoEventWireup="true" CodeBehind="login.aspx.cs" Inherits="Taruc_Accomodation_Systems.WebForm8" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Masterpage.Master" AutoEventWireup="true" EnableEventValidation="false" CodeBehind="login.aspx.cs" Inherits="Taruc_Accomodation_Systems.WebForm8" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server" >
@@ -86,7 +86,7 @@
 					</div>
 
 					<div class="container-login100-form-btn">
-						<asp:Button ID="btnlogin" class="login100-form-btn" runat="server" Text="Login" BackColor="White" BorderStyle="Solid" ForeColor="Black" />
+						<asp:Button ID="btnlogin" class="login100-form-btn" runat="server" Text="Login" BackColor="White" BorderStyle="Solid" ForeColor="Black" OnClick="btnlogin_Click" />
 					    <br />
 						<br />
 						<br />
