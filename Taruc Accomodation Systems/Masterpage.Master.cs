@@ -11,7 +11,7 @@ namespace Taruc_Accomodation_Systems
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
+           
         }
     }
 }
