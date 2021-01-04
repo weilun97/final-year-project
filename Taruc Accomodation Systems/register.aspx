@@ -46,7 +46,6 @@
 					<div class="wrap-input100 validate-input m-b-26" data-validate="First name is required">
                         <asp:TextBox ID="txtfirstname" class="input100" placeholder="First Name *" runat="server"></asp:TextBox>
                         <span class="focus-input100">
-                        <asp:RequiredFieldValidator ID="RequiredFieldValidatorfname" runat="server" ErrorMessage="Name is required" ControlToValidate="txtfirstname"></asp:RequiredFieldValidator>
                         </span>
 					</div>
 				</div>
