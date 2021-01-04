@@ -20,44 +20,20 @@ namespace Taruc_Accomodation_Systems
 
         protected void btnlogin_Click(object sender, EventArgs e)
         {
-            using (sqlCon)
+            sqlCon.Open();
+            string query = "Select count(*) from register where username='" + txtusername.Text + "' and password='" + txtpassword.Text + "'";
+            SqlCommand cmd = new SqlCommand(query, sqlCon);
+            string output = cmd.ExecuteScalar().ToString();
+
+            if (output == "1")
             {
-                sqlCon.Open();
-                string query = "SELECT * FROM [dbo].[register] WHERE username = @username AND password = @password";
-                SqlCommand sqlCmd = new SqlCommand(query, sqlCon);
-                sqlCmd.Parameters.AddWithValue("@username", txtusername.Text.Trim());
-                sqlCmd.Parameters.AddWithValue("@password", txtpassword.Text.Trim());
-                int count = Convert.ToInt32(sqlCmd.ExecuteScalar());
-                if (count == 1)
-                {
-                    Session["userame"] = txtusername.Text.Trim();
-                    Response.Redirect("Main.aspx");
-                }
-
-                //DataTable UserDT = new DataTable();
-                //SqlDataAdapter dataAdapter = new SqlDataAdapter(sqlCmd);
-                //dataAdapter.Fill(UserDT);
-
-                //if (UserDT.Rows.Count == 1)
-                //{
-                    //HttpCookie username = new HttpCookie("username", UserDT.Rows[0]["username"].ToString());
-                    //HttpCookie userid = new HttpCookie("userid", UserDT.Rows[0]["userid"].ToString());
-
-                    //username.Expires = DateTime.Now.AddDays(30);
-                    //userid.Expires = DateTime.Now.AddDays(30);
-
-                    //Response.Cookies.Add(username);
-                    //Response.Cookies.Add(userid);
-
-                    //Response.Redirect("Main.aspx");
-                //}
-
-                else
-                {
-                    Response.Write("<script>alert('username and password is invalid');</script>");
-                }
+                Response.Redirect("Main.aspx");
             }
 
+            else
+            {
+                Response.Write("<script>alert('Username Or Password Is Incorrect!');</script>");
+            }
         }
     }
 }
