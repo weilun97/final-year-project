@@ -34,16 +34,16 @@ namespace Taruc_Accomodation_Systems
                 string username = sdr["email"].ToString();
                 string password = sdr["password"].ToString();
 
-                MailMessage mm = new MailMessage("yeowweilun97@gmail.com", txtemail.Text);
-                mm.Subject = "Your Password!";
+                MailMessage mm = new MailMessage("yeowweilun.ywl@gmail.com", txtemail.Text);
+                mm.Subject = "Retrieving Password via Email";
                 mm.Body = string.Format("Hello: <h1>{0}</h1> is your email id <br/> your password is <h1>{1}</h1>", username, password);
                 mm.IsBodyHtml = true;
                 SmtpClient smtp = new SmtpClient();
                 smtp.Host = "smtp.gmail.com";
                 smtp.EnableSsl = true;
                 NetworkCredential nc = new NetworkCredential();
-                nc.UserName = "yeowweilun97@gmail.com";
-                nc.Password = "admin";
+                nc.UserName = "yeowweilun.ywl@gmail.com";
+                nc.Password = "yeowywl97";
                 smtp.UseDefaultCredentials = true;
                 smtp.Credentials = nc;
                 smtp.Port = 587;

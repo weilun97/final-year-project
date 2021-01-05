@@ -79,7 +79,7 @@
 						</div>
 <br />
 						<div>
-							<a href="#" class="txt1" style="text-align:center" onclick="window.open('forgotpassword.aspx','FP','width=500,height=50,top=300,left=500,fullscreen=no,resizeable=0');">
+							<a href="#" class="txt1" style="text-align:center" onclick="window.open('forgotpassword.aspx','FP','width=500,height=150,top=300,left=500,fullscreen=no,resizeable=0');">
 								Forgot Password?
 							</a><br />
 						</div>

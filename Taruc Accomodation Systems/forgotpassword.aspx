@@ -12,7 +12,7 @@
     <center>
         Enter your email address : <asp:TextBox ID="txtemail" runat="server"></asp:TextBox><br /><br />
         <asp:Button ID="retreivepass" runat="server" Text="Retreive Password" OnClick="retreivepass_Click"></asp:Button><br />
-        <asp:Label ID="lblmsg" runat="server" Text="label"></asp:Label>
+        <asp:Label ID="lblmsg" runat="server" Text=" "></asp:Label>
     </center>
     </div>
     </form>
