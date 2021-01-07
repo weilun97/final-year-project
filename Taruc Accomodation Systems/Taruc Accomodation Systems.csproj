@@ -191,7 +191,6 @@
     <Content Include="js\mixitup.min.js" />
     <Content Include="js\owl.carousel.min.js" />
     <Content Include="register.aspx" />
-    <Content Include="userprofile.aspx" />
     <Content Include="vendor\animate\animate.css" />
     <Content Include="vendor\animsition\css\animsition.css" />
     <Content Include="vendor\animsition\css\animsition.min.css" />
@@ -323,13 +322,6 @@
     </Compile>
     <Compile Include="login.aspx.designer.cs">
       <DependentUpon>login.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="userprofile.aspx.cs">
-      <DependentUpon>userprofile.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="userprofile.aspx.designer.cs">
-      <DependentUpon>userprofile.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>
