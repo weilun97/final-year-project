@@ -76,7 +76,9 @@
           <li><a href="AboutUs.aspx">About us</a></li>
           
           <li><a href="cart.aspx">Cart</a></li>
-          <li><a href="register.aspx">Login/SignUp</a></li>
+           <li><asp:LinkButton ID="login" runat="server">Login/SignUp</asp:LinkButton></li>
+            <li><asp:LinkButton ID="uname" runat="server">LinkButton</asp:LinkButton></li>
+          <!--<li><a href="register.aspx">Login/SignUp</a></li>-->
 
         </ul>
       </nav><!-- .nav-menu -->

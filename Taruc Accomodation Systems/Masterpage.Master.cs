@@ -11,7 +11,16 @@ namespace Taruc_Accomodation_Systems
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-           
+            if (Session["user"] == null)
+            {
+                login.Visible = true;
+                uname.Visible = true;
+            }
+
+            else
+            {
+                uname.Text = Session["username"].ToString();
+            }
         }
     }
 }
