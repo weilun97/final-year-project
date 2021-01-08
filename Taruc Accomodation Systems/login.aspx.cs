@@ -15,11 +15,15 @@ namespace Taruc_Accomodation_Systems
         SqlConnection sqlCon = new SqlConnection(ConfigurationManager.ConnectionStrings["Database"].ConnectionString);
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            if (Session["user"] != null)
+            {
+                Response.Redirect("userprofile.aspx");
+            }
         }
 
         protected void btnlogin_Click(object sender, EventArgs e)
         {
+            string user = txtusername.Text.Trim();
             sqlCon.Open();
             string query = "Select count(*) from register where username='" + txtusername.Text + "' and password='" + txtpassword.Text + "'";
             SqlCommand cmd = new SqlCommand(query, sqlCon);
@@ -27,7 +31,10 @@ namespace Taruc_Accomodation_Systems
 
             if (output == "1")
             {
-                Response.Redirect("Main.aspx");
+                Session["user"] = user;
+                Response.Redirect("userprofile.aspx");
+                //Response.Redirect("Main.aspx");
+
             }
 
             else
