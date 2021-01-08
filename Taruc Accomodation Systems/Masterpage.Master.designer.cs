@@ -31,13 +31,13 @@ namespace Taruc_Accomodation_Systems {
         protected global::System.Web.UI.HtmlControls.HtmlForm form1;
         
         /// <summary>
-        /// login control.
+        /// loginsignup control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.LinkButton login;
+        protected global::System.Web.UI.WebControls.LinkButton loginsignup;
         
         /// <summary>
         /// uname control.

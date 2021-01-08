@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Masterpage.Master" AutoEventWireup="true" CodeBehind="Main.aspx.cs" Inherits="Taruc_Accomodation_Systems.WebForm1" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Masterpage.Master" AutoEventWireup="true" EnableEventValidation="false" CodeBehind="Main.aspx.cs" Inherits="Taruc_Accomodation_Systems.WebForm1" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 
